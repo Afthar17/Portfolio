@@ -15,7 +15,7 @@ const ShinyEffect = (left, right, top, size = 500) => {
         positionStyles.right = `${right}px`
     }
     return (
-        <div className='shimy-effect' style={positionStyles}></div>
+        <div className='shiny-effect' style={positionStyles}></div>
     )
 }
 
