@@ -20,7 +20,7 @@ const Hero = () => {
                     <TypeAnimation
                         sequence={["Fullstack Dev",
                             1000,
-                            "ECE Engineer",
+                            "EC Engineer",
                             1000
                         ]}
                         speed={50}
