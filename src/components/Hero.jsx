@@ -7,6 +7,7 @@ import { DiCss3, DiHtml5, DiJavascript1, DiNodejsSmall, DiReact } from 'react-ic
 import { motion } from 'framer-motion'
 
 const Hero = () => {
+    const filePath = '../assets/Resume.pdf'
     return (
         <div className='mt-24 max-w-[1200px] mx-auto relative'>
             <div className=" place-items-center gap-8 grid md:grid-cols-2">
@@ -55,8 +56,10 @@ const Hero = () => {
                         className='flex flex-row items-center gap-6 my-4 md:mb-0'
                     >
                         <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0,0,0,0.3" }} className='z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
-                         border-purple-400 rounded-xl'  >
-                            Download CV
+                         border-purple-400 rounded-xl' ><a href={filePath} download="Resume.pdf">
+                                Download CV
+                            </a>
+
                         </motion.button>
                         <div className=' flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20'>
                             <motion.a whileHover={{ scale: 1.2 }} href='https://github.com/Afthar17'>
