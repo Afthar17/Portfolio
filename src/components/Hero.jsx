@@ -78,7 +78,7 @@ const Hero = () => {
 
                 <motion.img
                     src={meonly}
-                    className='w-[200px] md:w-[350px] '
+                    className='w-[200px] md:w-[300px] ml-4'
                     initial={{ opacity: 0, scale: .8 }}//inital state start with transparent  
                     whileInView={{ opacity: 1, scale: 1 }}// it becomes viewable
                     viewport={{ once: true }} //Animation only works when the page is loaded
@@ -100,7 +100,7 @@ const Hero = () => {
 
                 </motion.div>
                 <div className='absolute inset-0 hidden md:block'>
-                    <ShinyEffect left={0} top={0} size={1400} />
+                    <ShinyEffect left={0} top={0} size={3000} />
                 </div>
 
             </div>
