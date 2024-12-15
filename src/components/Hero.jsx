@@ -1,7 +1,7 @@
 import React from 'react'
 import meonly from '../assets/meonly.png'
 import { TypeAnimation } from 'react-type-animation'
-import ShinyEffect from './shinyEffect'
+import ShinyEffect from './ShinyEffect'
 import { AiOutlineGithub, AiOutlineInstagram, AiOutlineLinkedin, } from 'react-icons/ai'
 import { DiCss3, DiHtml5, DiJavascript1, DiNodejsSmall, DiReact } from 'react-icons/di'
 import { motion } from 'framer-motion'
