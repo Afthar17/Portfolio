@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGithub, FaInstagram } from 'react-icons/fa'
-import ShinyEffect from './shinyEffect'
+
 
 const Footer = () => {
     return (
