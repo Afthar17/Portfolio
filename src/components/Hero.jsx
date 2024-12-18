@@ -1,5 +1,5 @@
 import React from 'react'
-import meonly from '../assets/meonly.png'
+import Resume from '../assets/Resume.pdf'
 import { TypeAnimation } from 'react-type-animation'
 import ShinyEffect from './ShinyEffect'
 import { AiOutlineGithub, AiOutlineInstagram, AiOutlineLinkedin, } from 'react-icons/ai'
@@ -7,7 +7,6 @@ import { DiCss3, DiHtml5, DiJavascript1, DiNodejsSmall, DiReact } from 'react-ic
 import { motion } from 'framer-motion'
 
 const Hero = () => {
-    const filePath = '../assets/Resume.pdf'
     return (
         <div className='mt-24 max-w-[1200px] mx-auto relative'>
             <div className=" place-items-start px-4 gap-8 grid md:grid-cols-1 ">
@@ -56,7 +55,7 @@ const Hero = () => {
                         className='flex flex-row items-center gap-6 my-4 md:mb-0'
                     >
                         <motion.button whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0,0,0,0.3" }} className='z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
-                         border-purple-400 rounded-xl' ><a href={filePath} download="Resume.pdf">
+                         border-purple-400 rounded-xl'><a href={Resume} download="Resume.pdf">
                                 Download CV
                             </a>
 
