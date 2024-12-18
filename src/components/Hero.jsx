@@ -10,7 +10,7 @@ const Hero = () => {
     const filePath = '../assets/Resume.pdf'
     return (
         <div className='mt-24 max-w-[1200px] mx-auto relative'>
-            <div className=" place-items-center gap-8 grid md:grid-cols-2">
+            <div className=" place-items-start px-4 gap-8 grid md:grid-cols-1 ">
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}//inital state start with transparent and 50px away from ins final position 
                     whileInView={{ opacity: 1, y: 0 }}// it becomes viewable
@@ -76,28 +76,27 @@ const Hero = () => {
 
                 </motion.div>
 
-                <motion.img
+                {/* <motion.img
                     src={meonly}
-                    className='w-[200px] md:w-[300px] ml-4'
+                    className='w-[200px] md:w-[250px] ml-4'
                     initial={{ opacity: 0, scale: .8 }}//inital state start with transparent  
                     whileInView={{ opacity: 1, scale: 1 }}// it becomes viewable
                     viewport={{ once: true }} //Animation only works when the page is loaded
                     transition={{ duration: 1 }}//transition over 1 sec
-                />
+                /> */}
                 <motion.div
-                    initial={{ opacity: 0, }}//inital state start with transparent  
-                    whileInView={{ opacity: 1 }}// it becomes viewable
-                    viewport={{ once: true }} //Animation only works when the page is loaded
-                    transition={{ duration: 1, delay: 2 }}//transition over 1 sec
-                    className='flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center  py-24 '
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 2 }}
+                    className='flex flex-wrap justify-center items-center gap-4 mt-8 mb-3'
                 >
-                    <p className='text-gray-400 mr-6'>My Tech stack</p>
-                    <DiHtml5 className='text-orange-600 mx-2' />
-                    <DiCss3 className='text-blue-600 mx-2' />
-                    <DiJavascript1 className='text-yellow-600 mx-2' />
-                    <DiReact className='text-blue-500 mx-2' />
-                    <DiNodejsSmall className='text-green-500 mx-2' />
-
+                    <p className='text-gray-400 text-lg md:text-2xl'>My Tech Stack</p>
+                    <DiHtml5 className='text-orange-600 text-4xl md:text-6xl' />
+                    <DiCss3 className='text-blue-600 text-4xl md:text-6xl' />
+                    <DiJavascript1 className='text-yellow-600 text-4xl md:text-6xl' />
+                    <DiReact className='text-blue-500 text-4xl md:text-6xl' />
+                    <DiNodejsSmall className='text-green-500 text-4xl md:text-6xl' />
                 </motion.div>
                 <div className='absolute inset-0 hidden md:block'>
                     <ShinyEffect left={0} top={0} size={3000} />

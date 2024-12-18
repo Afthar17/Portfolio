@@ -46,7 +46,7 @@ const skills = [
 
 const Skillss = () => {
     return (
-        <div className='flex flex-col justify-center items-center px-4 text-gray-200 md:py-12 ' id='skills'>
+        <div className='flex flex-col justify-center items-center px-4 text-gray-200  md:py-12 ' id='skills'>
             <Reveal>
                 <h2 className='font-bold text-3xl mb-4 text-center '>Skills</h2>
                 <p className='text-center mb-8'>I worked on various frontend an fullstack projects. Check them <a className=' 
