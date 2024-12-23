@@ -36,7 +36,7 @@ const Contact = () => {
                         ><h2 className='font-semibold text-gray-300'>
                                 Successfully  <span>Contacted</span>
                             </h2><MdDone className='text-green-600 font-bold text-5xl item-center' />
-                        </div>) : (<form action="https://formsubmit.co/your@email.com" method="POST"
+                        </div>) : (<form action="https://formsubmit.co/el/ditiku" method="POST"
                             className=' max-w-6xl p-5 md:p-11'
                             id='form'>
                             <p className='text-gray-100 font-bold text-xl mb-2'>Let's <span>Connect</span></p>
