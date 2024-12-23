@@ -9,6 +9,29 @@ const Contact = () => {
     const handleSubmit = () => {
         setSubmitted(true)
     }
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        handleSubmit()
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "8c6e7c75-8582-4ea9-a54a-588c79f8acb8");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: json
+        }).then((res) => res.json());
+
+        if (res.success) {
+            console.log("Success", res);
+        }
+    };
     return (
         <div className='px-6 max-w-[1000px] mx-auto md:my-12' id='contact'>
             <Reveal>
@@ -36,17 +59,17 @@ const Contact = () => {
                         ><h2 className='font-semibold text-gray-300'>
                                 Successfully  <span>Contacted</span>
                             </h2><MdDone className='text-green-600 font-bold text-5xl item-center' />
-                        </div>) : (<form action="https://formsubmit.co/el/ditiku" method="POST"
+                        </div>) : (<form onSubmit={onSubmit}
                             className=' max-w-6xl p-5 md:p-11'
                             id='form'>
                             <p className='text-gray-100 font-bold text-xl mb-2'>Let's <span>Connect</span></p>
                             <input type="text" id='name' placeholder='Your name..' name='name' className='mb-2 w-full rounded-md border border-purple-600
-                    py-2 pl-2 pr-4' />
+                                py-2 pl-2 pr-4' />
                             <input type="email" id='email' placeholder='Your email..' name='email' className='mb-2 w-full rounded-md border border-purple-600
-                    py-2 pl-2 pr-4' />
-                            <textarea type="textarea" id='textarea' name='textarea' placeholder='Your message..' cols='30' rows='4' className='mb-2 w-full rounded-md border border-purple-600
-                    py-2 pl-2 pr-4' />
-                            <button type='submit' onClick={handleSubmit}
+                                 py-2 pl-2 pr-4' />
+                            <textarea type="textarea" id='textarea' name='message' placeholder='Your message..' cols='30' rows='4' className='mb-2 w-full rounded-md border border-purple-600
+                                 py-2 pl-2 pr-4' />
+                            <button type='submit'
                                 className='w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-primary-color'>Submit</button>
                         </form>)}
                     </div>
