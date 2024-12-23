@@ -50,7 +50,7 @@ const Skillss = () => {
             <Reveal>
                 <h2 className='font-bold text-3xl mb-4 text-center '>Skills</h2>
                 <p className='text-center mb-8'>I worked on various frontend an fullstack projects. Check them <a className=' 
-              cursor-pointer ' href="skills"><span className='font-semibold'>here...</span></a></p>
+              cursor-pointer ' href=""><span className='font-semibold'>here...</span></a></p>
                 <div className='flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8
                 max-w-[1000px] mx-auto'>
                     {skills.map((skill, index) => (
