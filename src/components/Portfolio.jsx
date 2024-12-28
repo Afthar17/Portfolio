@@ -5,6 +5,7 @@ import login from '../assets/loginpage.png'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { div } from 'framer-motion/client'
 import Reveal from './Reveal'
+import goalSetter from '../assets/goalSetter.png'
 
 const projects = [
     {
@@ -32,6 +33,15 @@ const projects = [
         links: {
             site: '',
             github: 'https://github.com/Afthar17/loginpage'
+        }
+    },
+    {
+        img: goalSetter,
+        title: 'project#4',
+        description: 'MERN stack application for goal setting',
+        links: {
+            site: '',
+            github: 'https://github.com/Afthar17/MERN-App'
         }
     }
 ]
