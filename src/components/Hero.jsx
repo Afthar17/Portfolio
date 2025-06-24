@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { SiMui, SiPostman, SiRedux, SiSocketdotio, SiTailwindcss } from 'react-icons/si'
 import zustand from '../assets/logo512.png'
 import me from '../assets/me.png'
+import { TbBrandFramerMotion } from 'react-icons/tb'
 
 const Hero = () => {
     return (
@@ -83,9 +84,9 @@ const Hero = () => {
                     <motion.img
                         src={me}
                         className='z-10  mb-2'
-                        initial={{ opacity: 0, scale: .8 }}//inital state start with transparent  
-                        whileInView={{ opacity: 1, scale: 1 }}// it becomes viewable
-                        viewport={{ once: true }} //Animation only works when the page is loaded
+                        initial={{ opacity: 0, scale: .6 }}//inital state start with transparent  
+                        whileInView={{ opacity: 1, scale: 1,delay:.5,duration:1 }}// it becomes viewable
+                        viewport={{ once: false }} //Animation only works when the page is loaded
                         transition={{ duration: 1 }}//transition over 1 sec
                     />
                     <div className='absolute inset-0 hidden md:block'>
@@ -98,11 +99,10 @@ const Hero = () => {
 
             </div>
             <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, y: 80 }}
+                    whileInView={{ opacity: 1,y: 0 ,delay:.5,duration:1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 2 }}
+                    transition={{ duration: 1 }}
                     className='flex flex-col flex-wrap justify-center items-center gap-4 mt-8 mb-3'
                 >
                     <p className='text-gray-400 text-lg md:text-2xl'>My Tech Stack</p>
@@ -126,6 +126,7 @@ const Hero = () => {
                                 <img src={zustand} className="text-gray-600 w-10 h-10 md:w-14 md:h-14 " />
                                 <SiMui className="text-blue-600 text-4xl md:text-6xl" />
                                 <AiOutlineGithub className="text-gray-600 text-4xl md:text-6xl" />
+                                <TbBrandFramerMotion className="text-purple-600 text-4xl md:text-6xl" />
                             </div>
                             ))}
                         </div>

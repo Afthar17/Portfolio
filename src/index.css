@@ -32,6 +32,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animateGradient 4s linear infinite;
+  line-height: 1.4;
+  padding-bottom: 2px;
 }
 
 @keyframes animateGradient {
@@ -68,6 +70,26 @@ body {
     z-index: 1;
     background: radial-gradient(circle, rgba(178, 19, 202, 0.2), transparent 70%);  
   }
+
+  .animated-box {
+  box-shadow: 0 0 10px 0 #ff00cc;
+  animation: boxGlow 2s infinite alternate;
+  }
+
+  @keyframes boxGlow {
+    0% {
+      box-shadow: 0 0 5px 0 #ff00cc;
+    }
+    100% {
+      box-shadow: 0 0 5px  #00ffff;
+    }
+  }
+/* .card {
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+} */
 
   
   .bg-primary-color {
