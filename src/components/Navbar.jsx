@@ -7,6 +7,7 @@ import logo from '../assets/logo.png'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
+    const [animationComplete, setAnimationComplete] = useState(false);
 
     const toggleNav = () => {
         setNav(!nav)
@@ -31,13 +32,40 @@ const Navbar = () => {
         }
     }
     return (
+        <>
+        {!animationComplete && (
+            <motion.div
+                className="fixed inset-0 bg-transparent backdrop-blur-sm rounded-lg z-[9999] flex gap-2 items-center justify-center"
+                initial={{ scale: 1 }}
+                animate={{ scale: 0.1, x: '-45vw', y: '-43vh' }}
+                transition={{ duration: 2, delay: 1, ease: 'easeInOut' }}
+                onAnimationComplete={() => setAnimationComplete(true)}
+            >
+                <motion.img
+                src={logo}
+                alt="Afthar Logo"
+                className="w-[20px] md:w-[450px] md:h-[450px] h-[200px] rounded-full"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                />
+                {/* <motion.p
+                className="text-white text-3xl md:text-[250px] font-bold"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                >
+                Afthar
+                </motion.p> */}
+            </motion.div>
+        )}
         <div className='fixed top-0 left-2 right-2 w-[95%] overflow-hidden bg-opacity-70 backdrop-blur-md z-50'>
-            <div className=' flex justify-between text-gray-200
-            text-xl items-center px-5 mx-4 overflow-hidden h-16 '>
-                <div className='flex items-center gap-2'>
+            {animationComplete && (<motion.div  className=' flex justify-between text-gray-200
+            text-xl items-center px-5 mx-4 overflow-hidden h-20 '>
+                <motion.div  className='flex items-center gap-2'>
                     <img src={logo} alt="" className='w-10 rounded-full'/>
                     <a href="#" className='font-semibold text-2xl'>Afthar</a>
-                </div>
+                </motion.div>
 
                 <ul className='hidden text-lg md:flex gap-8 z-10 cursor-pointer'>
                     <li>
@@ -75,8 +103,9 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </motion.div>
-            </div>
+            </motion.div>)}
         </div>
+        </>
     )
 }
 

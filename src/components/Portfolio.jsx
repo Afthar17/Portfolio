@@ -83,7 +83,7 @@ const Portfolio = () => {
         
         const interval = setInterval(() => {
         setCurrentImageIndex(prev => (prev + 1) % currentProjectImages.length);
-        }, 5000); // Change image every 5 seconds
+        }, 3000); // Change image every 3 seconds
             
         return () => clearInterval(interval);
     }, [selectedProject]);
@@ -122,7 +122,7 @@ const Portfolio = () => {
                             </motion.button>
                         </div>
                     </div>
-                    <motion.div initial={{ opacity: 0 ,scale: 0.5 }} whileInView={{ opacity: 1,scale: 1 }} transition={{ duration: 1 }} viewport={{ once: true }} className='md:max-w-[1000px] max-w-[600px] h-[300px] md:h-[600px] w-full m-auto py-8 md:py-16 px-4 relative'>
+                    <motion.div initial={{ opacity: 0 ,scale: 0.5 }} whileInView={{ opacity: 1,scale: 1 }} transition={{ duration: 1 }} viewport={{ once: false }} className='md:max-w-[1000px] max-w-[600px] h-[300px] md:h-[600px] w-full m-auto py-8 md:py-16 px-4 relative'>
                         <div className="relative w-full h-full overflow-hidden rounded-2xl">
                             {projectImages.map((img, index) => (
                             <div 
@@ -141,7 +141,7 @@ const Portfolio = () => {
                         </div>
                         {projectImages.length > 1 && <div className="relative flex items-center justify-center">
                             {projectImages.map((img,index) => (
-                                <motion.button key={index} whileHover={{scale:1.2}} className={`mt-2 mx-1 border-2 border-purple-800 text-3xl p-1 rounded-full text-white ${index === currentImageIndex ? 'bg-purple-700' : ''}`} onClick={()=> setCurrentImageIndex(index)}></motion.button>
+                                <motion.button key={index} whileHover={{scale:1.2}} className={`mt-2 mx-1 border-2 border-purple-800 text-3xl p-1 rounded-full text-white ${index === currentImageIndex ? 'bg-purple-700' : ''}`} onClick={()=> {setCurrentImageIndex(index)}}></motion.button>
                             ))}
                         </div>}
                         <div className="flex items-center justify-center mt-3 gap-2">
@@ -150,7 +150,7 @@ const Portfolio = () => {
                                 key={index}
                                 whileHover={{scale:1.2}}
                                 className={`border border-purple-700  p-1 rounded-xl text-white `}
-                                onClick={() => setSelectedProject(index)}
+                                onClick={() => {setSelectedProject(index);setCurrentImageIndex(0)}}
                             >
                                 <img src={img[0]} className={` object-cover ${index === selectedProject ? 'w-16 h-16 md:w-20 md:h-20' : 'w-10 h-10 md:w-12 md:h-12'}`} alt="" />
                             </motion.button>
