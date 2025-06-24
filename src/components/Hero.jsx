@@ -87,7 +87,7 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: .6 }}//inital state start with transparent  
                         whileInView={{ opacity: 1, scale: 1,delay:.5,duration:1 }}// it becomes viewable
                         viewport={{ once: false }} //Animation only works when the page is loaded
-                        transition={{ duration: 1 }}//transition over 1 sec
+                        transition={{smoooth: true, duration: 1, delay:.5 }}//transition over 1 sec
                     />
                     <div className='absolute inset-0 hidden md:block'>
                         <ShinyEffect left={0} top={0} size={3000} />
@@ -102,7 +102,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 80 }}
                     whileInView={{ opacity: 1,y: 0 ,delay:.5,duration:1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1 }}
+                    transition={{smooth: true, duration: 1,delay:.5 }}
                     className='flex flex-col flex-wrap justify-center items-center gap-4 mt-8 mb-3'
                 >
                     <p className='text-gray-400 text-lg md:text-2xl'>My Tech Stack</p>
