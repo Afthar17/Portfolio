@@ -44,7 +44,7 @@ const Navbar = () => {
                 <motion.img
                 src={logo}
                 alt="Afthar Logo"
-                className="w-[20px] md:w-[450px] md:h-[450px] h-[200px] rounded-full"
+                className="w-[200px] md:w-[450px] md:h-[450px] h-[200px] rounded-full"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
