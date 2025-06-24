@@ -1,20 +1,23 @@
-import React from 'react'
 import Resume from '../assets/Resume.pdf'
 import { TypeAnimation } from 'react-type-animation'
 import ShinyEffect from './ShinyEffect'
 import { AiOutlineGithub, AiOutlineInstagram, AiOutlineLinkedin, } from 'react-icons/ai'
-import { DiCss3, DiHtml5, DiJavascript1, DiNodejsSmall, DiReact } from 'react-icons/di'
+import { DiCss3, DiHtml5, DiJavascript1, DiMaterializecss, DiMongodb, DiNodejsSmall, DiReact } from 'react-icons/di'
 import { motion } from 'framer-motion'
+import { SiMui, SiPostman, SiRedux, SiSocketdotio, SiTailwindcss } from 'react-icons/si'
+import zustand from '../assets/logo512.png'
+import me from '../assets/me.png'
 
 const Hero = () => {
     return (
-        <div className='mt-24 max-w-[1200px] mx-auto relative'>
-            <div className=" place-items-start px-4 gap-8 grid md:grid-cols-1 ">
+        <div className='mt-24 mb-16 max-w-[1200px] mx-auto relative'>
+            <div className=" place-items-start px-4 gap-3 grid grid-cols-1 md:grid-cols-2 ">
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}//inital state start with transparent and 50px away from ins final position 
                     whileInView={{ opacity: 1, y: 0 }}// it becomes viewable
                     viewport={{ once: true }} //Animation only works when the page is loaded
                     transition={{ duration: 1 }}//transition over 1 sec
+                    className='flex flex-col gap-4'
                 >
 
                     <TypeAnimation
@@ -36,16 +39,18 @@ const Hero = () => {
                         className='text-gray-200 md-text-7xl text-5xl tracking-tight mb-4'
                     >
                         HEY, I AM <br />
-                        <span >AFTHAR</span>
+                        <span className='text-gradient font-semibold'>AFTHAR</span>
                     </motion.p>
                     <motion.p
                         initial={{ opacity: 0 }}//inital state start with transparent and 50px away from ins final position 
                         whileInView={{ opacity: 1 }}// it becomes viewable
                         viewport={{ once: true }} //Animation only works when the page is loaded
                         transition={{ duration: 1, delay: 1 }}//transition over 1 sec
-                        className='text-gray-200 md-text-2xl text-1g  mb-4 max-w-[300px] md:max-w-[500px]'
+                        className='text-gray-200 text-sm leading-7 md:text-lg  mb-4 max-w-[300px] md:max-w-[600px]'
                     >
-                        I am a passionate fullstack Developer and a student of MACE
+                        I'm an ECE graduate from MACE with a strong passion for web development. 
+                        I build responsive web apps using the MERN stack, with a focus on React.js.
+                        I enjoy creating clean, user-friendly interfaces and learning new technologies to improve my skills.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}//inital state start with transparent and 50px away from ins final position 
@@ -74,34 +79,58 @@ const Hero = () => {
                     </motion.div>
 
                 </motion.div>
-
-                {/* <motion.img
-                    src={meonly}
-                    className='w-[200px] md:w-[250px] ml-4'
-                    initial={{ opacity: 0, scale: .8 }}//inital state start with transparent  
-                    whileInView={{ opacity: 1, scale: 1 }}// it becomes viewable
-                    viewport={{ once: true }} //Animation only works when the page is loaded
-                    transition={{ duration: 1 }}//transition over 1 sec
-                /> */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 2 }}
-                    className='flex flex-wrap justify-center items-center gap-4 mt-8 mb-3'
-                >
-                    <p className='text-gray-400 text-lg md:text-2xl'>My Tech Stack</p>
-                    <DiHtml5 className='text-orange-600 text-4xl md:text-6xl' />
-                    <DiCss3 className='text-blue-600 text-4xl md:text-6xl' />
-                    <DiJavascript1 className='text-yellow-600 text-4xl md:text-6xl' />
-                    <DiReact className='text-blue-500 text-4xl md:text-6xl' />
-                    <DiNodejsSmall className='text-green-500 text-4xl md:text-6xl' />
-                </motion.div>
+                <div className='relative'>
+                    <motion.img
+                        src={me}
+                        className='z-10  mb-2'
+                        initial={{ opacity: 0, scale: .8 }}//inital state start with transparent  
+                        whileInView={{ opacity: 1, scale: 1 }}// it becomes viewable
+                        viewport={{ once: true }} //Animation only works when the page is loaded
+                        transition={{ duration: 1 }}//transition over 1 sec
+                    />
+                    <div className='absolute inset-0 hidden md:block'>
+                        <ShinyEffect left={0} top={0} size={3000} />
+                    </div>
+                </div>
                 <div className='absolute inset-0 hidden md:block'>
-                    <ShinyEffect left={0} top={0} size={3000} />
+                    <ShinyEffect left={10} top={0} size={1000} />
                 </div>
 
             </div>
+            <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 2 }}
+                    className='flex flex-col flex-wrap justify-center items-center gap-4 mt-8 mb-3'
+                >
+                    <p className='text-gray-400 text-lg md:text-2xl'>My Tech Stack</p>
+                    <div className="overflow-hidden relative flex items-center justify-center w-[80%] md:w-[50%] py-4 bg-transparent">
+                        <div className="animate-scroll flex gap-8 items-center whitespace-nowrap">
+                            {[...Array(3)].map((_, i) => (
+                            <div
+                                key={i}
+                                className="flex flex-row gap-8 items-center justify-center"
+                            >
+                                <DiHtml5 className="text-orange-600 text-4xl md:text-6xl" />
+                                <DiCss3 className="text-blue-600 text-4xl md:text-6xl" />
+                                <DiJavascript1 className="text-yellow-600 text-4xl md:text-6xl" />
+                                <DiReact className="text-blue-500 text-4xl md:text-6xl" />
+                                <DiNodejsSmall className="text-green-500 text-4xl md:text-6xl" />
+                                <DiMongodb className="text-green-500 text-4xl md:text-6xl" />
+                                <SiSocketdotio className="text-gray-600 text-4xl md:text-6xl" />
+                                <SiRedux className="text-purple-600 text-4xl md:text-6xl" />
+                                <SiTailwindcss className="text-cyan-400 text-4xl md:text-6xl" />
+                                <SiPostman className="text-orange-600 text-4xl md:text-6xl" />
+                                <img src={zustand} className="text-gray-600 w-10 h-10 md:w-14 md:h-14 " />
+                                <SiMui className="text-blue-600 text-4xl md:text-6xl" />
+                                <AiOutlineGithub className="text-gray-600 text-4xl md:text-6xl" />
+                            </div>
+                            ))}
+                        </div>
+                        </div>
+                </motion.div>
         </div>
     )
 }

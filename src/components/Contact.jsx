@@ -39,18 +39,22 @@ const Contact = () => {
                     <div>
                         <div className='text-gray-300 my-3'>
                             <h3 className='text-4xl font-semibold mb-5 '>About <span>Me</span></h3>
-                            <p className='text-justify tracking-tighter leading-7 w-11/12 mx-auto sm:text-2xl'>Meet Afthar, a passionate and driven Electronics and Communication Engineering student from Perumbavoor, Ernakulam. I'm currently pursuing my BTech at Mar Athanasius College of Engineering (MACE) and have a strong foundation in web development, particularly with the MERN stack. As a quick learner and problem-solver, I love exploring innovative ideas
-                                . My journey is all about growth, creativity, and making an impact in the tech world.
+                            <p className='text-justify tracking-tighter leading-6 w-11/12 mx-auto sm:text-xl'>
+                                I'm a skilled software developer with experience in JavaScript, 
+                                and expertise in frameworks like React, Node.js, Express.js and MongoDB.
+                                I'm a quick learner and collaborate closely with clients to create efficient,
+                                scalable, and user-friendly solutions that solve real-world problems.
+                                Let's work together to bring your ideas to life!
                             </p>
                         </div>
                         <div className='flex mt-10 items-center gap-7'>
                             <div className=' bg-gray-800/40 p-4 rounded-lg'>
                                 <h3 className='md:text-4xl text-2xl font-semibold text-white'>5<span>+</span></h3>
-                                <p className='text-xs md:text-base'><span>Projects</span></p>
+                                <p className='text-xs md:text-purple-400'><span>Projects</span></p>
                             </div>
                             <div className=' bg-gray-800/40 p-5 rounded-lg'>
                                 <h3 className='md:text-4xl text-2xl font-semibold text-white'>1<span>+</span></h3>
-                                <p className='text-xs md:text-base'><span>Experience</span></p>
+                                <p className='text-xs md:text-purple-400'><span>Experience</span></p>
                             </div>
                         </div>
                     </div>
