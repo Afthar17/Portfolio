@@ -38,8 +38,8 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 place-items-center">
                     <div>
                         <div className='text-gray-300 my-3'>
-                            <h3 className='text-4xl font-semibold mb-5 '>About <span>Me</span></h3>
-                            <p className='text-justify tracking-tighter leading-6 w-11/12 mx-auto sm:text-xl'>
+                            <h3 className='text-4xl font-semibold mb-5 text-gradient'>About <span>Me</span></h3>
+                            <p className='text-justify  w-11/12 mx-auto text-lg'>
                                 I'm a skilled software developer with experience in JavaScript, 
                                 and expertise in frameworks like React, Node.js, Express.js and MongoDB.
                                 I'm a quick learner and collaborate closely with clients to create efficient,
@@ -50,11 +50,11 @@ const Contact = () => {
                         <div className='flex mt-10 items-center gap-7'>
                             <div className=' bg-gray-800/40 p-4 rounded-lg'>
                                 <h3 className='md:text-4xl text-2xl font-semibold text-white'>5<span>+</span></h3>
-                                <p className='text-xs md:text-purple-400'><span>Projects</span></p>
+                                <p className='text-xs text-purple-400'><span>Projects</span></p>
                             </div>
                             <div className=' bg-gray-800/40 p-5 rounded-lg'>
                                 <h3 className='md:text-4xl text-2xl font-semibold text-white'>1<span>+</span></h3>
-                                <p className='text-xs md:text-purple-400'><span>Experience</span></p>
+                                <p className='text-xs text-purple-400'><span>Experience</span></p>
                             </div>
                         </div>
                     </div>
@@ -73,8 +73,8 @@ const Contact = () => {
                                  py-2 pl-2 pr-4' />
                             <textarea type="textarea" id='textarea' name='message' placeholder='Your message..' cols='30' rows='4' className='mb-2 w-full rounded-md border border-purple-600
                                  py-2 pl-2 pr-4' />
-                            <button type='submit'
-                                className='w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-primary-color'>Submit</button>
+                            <motion.button whileHover={{ scale: 1.05 }} type='submit'
+                                className='w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-primary-color'>Submit</motion.button>
                         </form>)}
                     </div>
 

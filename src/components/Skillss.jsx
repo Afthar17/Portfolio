@@ -92,7 +92,7 @@ const Skillss = () => {
                                     whileInView={{ x: 0,opacity:1}}
                                     transition={{smooth: true, duration: 1,delay:0.5 }}
                                     viewport={{ once: true }}
-                                 src={skill.image} alt={skill.category} className='absolute right-2 top-2 hidden md:block md:w-[45%] h-[95%] object-cover' />
+                                 src={skill.image} alt={skill.category} className='absolute right-2 top-2 hidden md:block md:w-[50%] h-[95%] object-cover' />
                             </div>
                         </div>
                     ))}
