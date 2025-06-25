@@ -101,7 +101,7 @@ const Portfolio = () => {
     const images = projects.map((project) => Object.values(project.img));
 
     return (
-        <div className="flex flex-col items-center justify-center w-full my-2 md:my-10">
+        <div className="flex flex-col items-center justify-center w-full my-2 md:my-10" id='projects'>
             <div className="flex flex-col w-full items-center justify-center">
                     <h2 className='text-5xl font-bold text-gradient text-center font-sans mb-0 md:mb-2'>Projects</h2>
                     <div className="flex justify-between w-[90%] md:w-[64%] ite">
@@ -116,7 +116,7 @@ const Portfolio = () => {
                                 Github
                             </motion.button>
                             <motion.button className='text-purple-500 w-24 md:w-28 p-2 font-semibold flex items-center justify-center gap-2 border-2 border-purple-500 rounded-full' whileHover={{scale: 1.1}}
-                                onClick={() => window.open(currentProject.links.site, '_blank')}>
+                                onClick={() => window.open(currentProject.links.site, '_blank')} disabled={currentProject.links.site === ''}>
                                 <BiGlobe className='' size={30} />
                                 Live
                             </motion.button>

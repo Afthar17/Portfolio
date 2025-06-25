@@ -69,7 +69,7 @@ const Skillss = () => {
               cursor-pointer ' href=""><span className='font-semibold text-gradient'>view my projects →</span></a></p>
                 <div className='flex flex-col items-center justify-center gap-5 p-4 rounded-lg w-full mb-4 h-[100%]'>
                     {skills.map((skill) => (
-                        <div key={skill.category} className='flex flex-col relative h-[450px] w-[90%] md:w-[80%] max-w-[1000px]  md:h-[500px] items-center justify-center backdrop-blur-3xl border border-slate-500  p-2 rounded-lg '>
+                        <div key={skill.category} className={`bg-[#252627] text-[#F2EFE9] flex flex-col relative h-[450px] w-[90%] md:w-[80%] max-w-[1000px]  md:h-[500px] items-center justify-center  border border-slate-500  p-2 rounded-lg`} >
                             <div className="flex w-full">
                                 <motion.div 
                                     initial={{ x: '-100%',opacity:0 }}

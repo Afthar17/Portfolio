@@ -69,13 +69,13 @@ const Navbar = () => {
 
                 <ul className='hidden text-lg md:flex gap-8 z-10 cursor-pointer'>
                     <li>
-                        <Link to='skills' smooth={true} offset={50} duration={100}>About</Link>
+                        <Link to='skills' smooth={true} offset={20} duration={100}>About</Link>
                     </li>
                     <li>
-                        <Link to='skills' smooth={true} offset={50} duration={100}>Services</Link>
+                        <Link to='services' smooth={true} offset={50} duration={100}>Services</Link>
                     </li>
                     <li>
-                        <Link to='portfolio' smooth={true} offset={50} duration={100}>Projects</Link>
+                        <Link to='projects' smooth={true} offset={50} duration={100}>Projects</Link>
                     </li>
                     <li>
                         <Link to='contact' smooth={true} offset={50} duration={100}>Contact</Link>
