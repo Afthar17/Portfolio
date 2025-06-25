@@ -35,9 +35,9 @@ const Navbar = () => {
             {/* Splash Animation */}
             {!animationComplete && (
                 <motion.div
-                className="fixed inset-0 bg-transparent backdrop-blur-sm rounded-lg z-[9999] flex gap-2 items-center justify-center"
+                className="fixed inset-0  bg-transparent backdrop-blur-sm rounded-lg z-[9999] flex gap-2 items-center justify-center"
                 initial={{ scale: 1 }}
-                animate={{ scale: 0.2, x: "-45vw", y: "-43vh" }}
+                animate={{ scale: 0.2, x: "calc(-50vw + 3rem)",y: "calc(-50vh + 1.5rem)" }}
                 transition={{ duration: 2, delay: 1, ease: "easeInOut" }}
                 onAnimationComplete={() => setAnimationComplete(true)}
                 >

@@ -45,7 +45,7 @@ const Experience = () => {
     
     {/* Left side image (hidden on mobile) */}
     <motion.div 
-      initial={{ opacity: 0, x: '-100%' }} 
+      initial={{ opacity: 0, x: -50 }} 
       whileInView={{ opacity: 1, x: 0 }} 
       transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
       viewport={{ once: true }}
@@ -59,7 +59,7 @@ const Experience = () => {
 
     {/* Right side content */}
     <motion.div 
-      initial={{ opacity: 0, x: '100%' }} 
+      initial={{ opacity: 0, x: 50 }} 
       whileInView={{ opacity: 1, x: 0 }} 
       transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
       viewport={{ once: true }}
@@ -81,7 +81,7 @@ const Experience = () => {
 
     {/* left side content */}
     <motion.div 
-      initial={{ opacity: 0, x: '-100%' }} 
+      initial={{ opacity: 0, x: -50 }} 
       whileInView={{ opacity: 1, x: 0 }} 
       transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
       viewport={{ once: true }}
@@ -101,7 +101,7 @@ const Experience = () => {
     </motion.div>
     {/* right side image (hidden on mobile) */}
     <motion.div 
-      initial={{ opacity: 0, x: '100%' }} 
+      initial={{ opacity: 0, x: 50 }} 
       whileInView={{ opacity: 1, x: 0 }} 
       transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
       viewport={{ once: true }}
