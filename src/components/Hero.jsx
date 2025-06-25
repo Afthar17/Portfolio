@@ -67,13 +67,13 @@ const Hero = () => {
 
                         </motion.button>
                         <div className=' flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20'>
-                            <motion.a whileHover={{ scale: 1.2 }} href='https://github.com/Afthar17'>
+                            <motion.a whileHover={{ scale: 1.2 }} href='https://github.com/Afthar17' rel='noreferrer' target='_blank'>
                                 <AiOutlineGithub />
                             </motion.a>
-                            <motion.a whileHover={{ scale: 1.2 }} href='https://www.linkedin.com/in/afthar-n-n-665a29314/'>
+                            <motion.a whileHover={{ scale: 1.2 }} href='https://www.linkedin.com/in/afthar-n-n-665a29314/' rel='noopener noreferrer' target="_blank">
                                 <AiOutlineLinkedin />
                             </motion.a>
-                            <motion.a whileHover={{ scale: 1.2 }} href='https://www.instagram.com/_a_f_t_h_a_r_17/?hl=en'>
+                            <motion.a whileHover={{ scale: 1.2 }} href='https://www.instagram.com/_a_f_t_h_a_r_17/?hl=en' rel='noreferrer' target='_blank'>
                                 <AiOutlineInstagram />
                             </motion.a>
                         </div>
