@@ -1,121 +1,138 @@
-import { motion } from 'framer-motion'
-import education from '../assets/education.jpg'
-import Experiences from '../assets/experience.jpg'
+import { motion } from "framer-motion";
+import education from "../assets/education.jpg";
+import Experiences from "../assets/experience.jpg";
 
 const experiences = [
-    {
-        institution: 'JHSS Thandekkad',
-        Period: '2016-17',
-        description: 'Passed SSLC with a mark of 96%'
-    },
-    {
-        institution: 'JHSS Thandekkad',
-        Period: '2017-19',
-        description: 'Passed +2 Biomaths'
-    },
-    {
-        institution: 'Govt.Polytechnic college Perumbavoor',
-        Period: '2019-22',
-        description: 'Passed Diploma in Electronics and Communication with a cgpa of 8.31 '
-    },
-    {
-        institution: 'Mar Athanasius college of Engineering Kothamangalam',
-        Period: '2022-25',
-        description: 'Btech graduate in electronics and communication'
-    },
-]
+  {
+    institution: "Mar Athanasius college of Engineering Kothamangalam",
+    Period: "2022-25",
+    description: "Btech graduate in electronics and communication",
+  },
+  {
+    institution: "Govt.Polytechnic college Perumbavoor",
+    Period: "2019-22",
+    description:
+      "Passed Diploma in Electronics and Communication with a cgpa of 8.31 ",
+  },
+  {
+    institution: "JHSS Thandekkad",
+    Period: "2017-19",
+    description: "Passed +2 Biomaths",
+  },
+  {
+    institution: "JHSS Thandekkad",
+    Period: "2016-17",
+    description: "Passed SSLC with a mark of 96%",
+  },
+];
 
 const workExperience = [
-    {
-        institution: 'Talks and Talks',
-        Period: 'Feb 25 - current',
-        Role: 'Frontend developer Intern',
-        description: 'During my 6-month internship, I worked on developing and optimizing responsive, user-friendly web interfaces using ReactJS.I also learned about component-based architecture, state management using tools like Redux or Zustand, API integration, and debugging. '
-    }
-]
+  {
+    institution: "Talks and Talks",
+    Period: "Feb 25 - Aug 25",
+    Role: "Frontend developer Intern",
+    description:
+      "During my 6-month internship, I worked on developing and optimizing responsive, user-friendly web interfaces using ReactJS.I also learned about component-based architecture, state management using tools like Redux or Zustand, API integration, and debugging. ",
+  },
+];
 
 const Experience = () => {
-    return (
-<div className="flex flex-col items-center justify-center w-full my-10 px-4 md:px-10">
-  <motion.h1 className="text-4xl md:text-5xl font-bold text-gradient text-center mt-16">
-    Academics and Experience
-  </motion.h1>
+  return (
+    <div className="flex flex-col items-center justify-center w-full my-10 px-4 md:px-10">
+      <motion.h1 className="text-4xl md:text-5xl font-bold text-gradient text-center mt-16">
+        Academics and Experience
+      </motion.h1>
 
-  <div className="flex flex-col md:flex-row text-[#252627] w-full max-w-6xl mt-10 ">
-    
-    {/* Left side image (hidden on mobile) */}
-    <motion.div 
-      initial={{ opacity: 0, x: -50 }} 
-      whileInView={{ opacity: 1, x: 0 }} 
-      transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
-      viewport={{ once: true }}
-      className="hidden md:flex w-1/2 items-center justify-center">
-      <img
-        src={education}
-        alt="Education"
-        className="w-full h-full object-cover rounded-l-xl"
-      />
-    </motion.div>
+      <div className="flex flex-col md:flex-row text-[#252627] w-full max-w-6xl mt-10 ">
+        {/* Left side image (hidden on mobile) */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="hidden md:flex w-1/2 items-center justify-center"
+        >
+          <img
+            src={education}
+            alt="Education"
+            className="w-full h-full object-cover rounded-l-xl"
+          />
+        </motion.div>
 
-    {/* Right side content */}
-    <motion.div 
-      initial={{ opacity: 0, x: 50 }} 
-      whileInView={{ opacity: 1, x: 0 }} 
-      transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
-      viewport={{ once: true }}
-      className="flex flex-col w-full md:w-1/2 bg-[#BFB48F] p-4 rounded-xl md:rounded-l-none md:rounded-r-xl">
-      <h3 className="text-2xl md:text-4xl font-bold text-center mb-6">Academics</h3>
+        {/* Right side content */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="flex flex-col w-full md:w-1/2 bg-[#BFB48F] p-4 rounded-xl md:rounded-l-none md:rounded-r-xl"
+        >
+          <h3 className="text-2xl md:text-4xl font-bold text-center mb-6">
+            Academics
+          </h3>
 
-      {experiences.map((experience, index) => (
-        <div key={index} className="mb-4">
-          <div className="flex justify-between items-center  gap-2">
-            <h2 className="text-lg font-bold">{experience.institution}</h2>
-            <p className="text-sm font-semibold whitespace-nowrap text-right">{experience.Period}</p>
-          </div>
-          <p className="text-sm font-medium mt-1">{experience.description}</p>
-        </div>
-      ))}
-    </motion.div>
-  </div>
-  <div className="flex flex-col md:flex-row text-[#F2EFE9] w-full max-w-6xl mt-10 mb-3">
+          {experiences.map((experience, index) => (
+            <div key={index} className="mb-4">
+              <div className="flex justify-between items-center  gap-2">
+                <h2 className="text-lg font-bold">{experience.institution}</h2>
+                <p className="text-sm font-semibold whitespace-nowrap text-right">
+                  {experience.Period}
+                </p>
+              </div>
+              <p className="text-sm font-medium mt-1">
+                {experience.description}
+              </p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+      <div className="flex flex-col md:flex-row text-[#F2EFE9] w-full max-w-6xl mt-10 mb-3">
+        {/* left side content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="flex flex-col w-full md:w-1/2 bg-[#252627] p-4 rounded-xl md:rounded-l-xl md:rounded-r-none"
+        >
+          <h3 className="text-2xl md:text-4xl font-bold text-center mb-6">
+            Experience
+          </h3>
 
-    {/* left side content */}
-    <motion.div 
-      initial={{ opacity: 0, x: -50 }} 
-      whileInView={{ opacity: 1, x: 0 }} 
-      transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
-      viewport={{ once: true }}
-      className="flex flex-col w-full md:w-1/2 bg-[#252627] p-4 rounded-xl md:rounded-l-xl md:rounded-r-none">
-      <h3 className="text-2xl md:text-4xl font-bold text-center mb-6">Experience</h3>
+          {workExperience.map((experience, index) => (
+            <div key={index} className="mb-4">
+              <div className="flex justify-between items-center  gap-2">
+                <h2 className="text-lg font-bold">{experience.institution}</h2>
+                <p className="text-sm font-semibold whitespace-nowrap text-right">
+                  {experience.Period}
+                </p>
+              </div>
+              <p className="text-sm font-medium mt-1">
+                <span className="font-semibold">Role:</span> {experience.Role}
+              </p>
+              <p className="text-sm font-medium mt-1">
+                {experience.description}
+              </p>
+            </div>
+          ))}
+        </motion.div>
+        {/* right side image (hidden on mobile) */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="hidden md:flex w-1/2 items-center justify-center"
+        >
+          <img
+            src={Experiences}
+            alt="Experiences"
+            className="w-full h-full object-cover rounded-r-xl"
+          />
+        </motion.div>
+      </div>
+    </div>
+  );
+};
 
-      {workExperience.map((experience, index) => (
-        <div key={index} className="mb-4">
-          <div className="flex justify-between items-center  gap-2">
-            <h2 className="text-lg font-bold">{experience.institution}</h2>
-            <p className="text-sm font-semibold whitespace-nowrap text-right">{experience.Period}</p>
-          </div>
-          <p className="text-sm font-medium mt-1"><span className='font-semibold'>Role:</span> {experience.Role}</p>
-          <p className="text-sm font-medium mt-1">{experience.description}</p>
-        </div>
-      ))}
-    </motion.div>
-    {/* right side image (hidden on mobile) */}
-    <motion.div 
-      initial={{ opacity: 0, x: 50 }} 
-      whileInView={{ opacity: 1, x: 0 }} 
-      transition={{ duration: 1, delay: .5 ,ease: 'easeInOut'}}
-      viewport={{ once: true }}
-      className="hidden md:flex w-1/2 items-center justify-center">
-      <img
-        src={Experiences}
-        alt="Experiences"
-        className="w-full h-full object-cover rounded-r-xl"
-      />
-    </motion.div>
-  </div>
-</div>
-
-    )
-}
-
-export default Experience
+export default Experience;
