@@ -31,7 +31,7 @@ const services = [
 const Service = () => {
   return (
     <div
-      className="flex flex-col w-full items-center justify-center bg-[#252627] p-1 md:p-4 "
+      className="flex flex-col w-full items-center justify-center bg-[#242038] p-1 md:p-4 "
       id="services"
     >
       <div className="flex flex-col items-center justify-center mx-0 md:mx-20 mb-8 mt-5 p-0 md:p-2">
@@ -47,7 +47,7 @@ const Service = () => {
               transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
               key={service.id}
-              className="flex flex-col items-center justify-center mx-2 my-3 p-2 bg-[#1B1B3A] rounded-xl shadow-lg shadow-gray-900 w-[350px] md:w-[390px]"
+              className="flex flex-col items-center justify-center mx-2 my-3 p-2 bg-[#230C33] rounded-xl shadow-sm shadow-gray-600 w-[350px] md:w-[390px]"
             >
               <div className="flex mt-3 text-[#F2EFE9]">{service.icon}</div>
               <h2 className="text-2xl font-bold text-gradient text-center">

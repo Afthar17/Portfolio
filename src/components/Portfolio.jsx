@@ -12,6 +12,12 @@ import ecommerceAdmin from "../assets/ecommerce-admin.png";
 import ecommerceLogin from "../assets/ecommerce_login.png";
 import ecommerceCart from "../assets/ecommerce_cart.png";
 import gemini from "../assets/gemini.png";
+import travelHome from "../assets/travel-home.png";
+import travelTrips from "../assets/travel-trips.png";
+import travelLoacation from "../assets/travel-location.png";
+import travelItinerary from "../assets/travel-itinerary.png";
+import travelGlobe from "../assets/travel-globe.png";
+import travelMap from "../assets/travel-map.png";
 import { motion } from "framer-motion";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
@@ -42,6 +48,23 @@ const projects = [
     links: {
       site: "https://chat-app-uz18.onrender.com/login",
       github: "https://github.com/Afthar17/Chat-app",
+    },
+  },
+  {
+    img: {
+      travelHome,
+      travelTrips,
+      travelLoacation,
+      travelItinerary,
+      travelGlobe,
+      travelMap,
+    },
+    title: "Travel Buddy",
+    description:
+      "A web app that helps users explore destinations, plan trips, and discover new places. Built with Next js.",
+    links: {
+      site: "https://travel-buddy-iota-seven.vercel.app/",
+      github: "https://github.com/Afthar17/Nextjs-app",
     },
   },
   {
@@ -153,7 +176,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="md:max-w-[1000px] max-w-[600px] h-[300px] md:h-[600px] w-full m-auto py-8 md:py-16 px-4 relative"
         >
           <div className="relative w-full h-full overflow-hidden rounded-2xl">
