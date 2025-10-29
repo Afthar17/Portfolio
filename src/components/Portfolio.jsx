@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import todo from "../assets/todo.png";
 import jobsearch from "../assets/jobsearch app.png";
-import login from "../assets/loginpage.png";
 import goalSetter from "../assets/goalSetter.png";
 import chat from "../assets/chat.png";
 import chatProfile from "../assets/chat_profile.png";
@@ -92,16 +91,6 @@ const projects = [
     links: {
       site: "https://react-jobsearch.netlify.app",
       github: "https://github.com/Afthar17/react-job-search-app",
-    },
-  },
-  {
-    img: { login },
-    title: "Login UI",
-    description:
-      "UI for frontend development using HTML and CSS and JavaScript",
-    links: {
-      site: "",
-      github: "https://github.com/Afthar17/loginpage",
     },
   },
 ];
